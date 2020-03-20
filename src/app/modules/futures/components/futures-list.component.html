@@ -1,0 +1,13 @@
+<div>
+  List of futures:
+  <div *ngIf="futures">
+    <div *ngIf="futures.length > 0; else noResults">
+      <div *ngFor="let future of futures">
+        {{ future.symbol }}
+      </div>
+    </div>
+  </div>
+  <ng-template #noResults>
+    No results
+  </ng-template>
+</div>
